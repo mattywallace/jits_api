@@ -1,10 +1,14 @@
-form flask import Flask 
+from flask import Flask 
 
 DEBUG=True 
 PORT=8000
 
 
-app = Flask(_name_)
+app = Flask(__name__)
 
-if _name_ = '_main_':
+@app.route('/')
+def hello():
+	return 'Hello World'
+
+if __name__ == '__main__':
 	app.run(debug=DEBUG, port=PORT)
